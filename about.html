@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Технологии | Компьютерное зрение в бизнесе</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tech-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .tech-diagram {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+        }
+        .algorithm-list {
+            columns: 2;
+            column-gap: 30px;
+        }
+        @media (max-width: 768px) {
+            .algorithm-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Технологии компьютерного зрения</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="about.html">Технологии</a>
+            <a href="examples.html">Примеры</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- История развития -->
+        <section class="tech-card">
+            <h2>История развития</h2>
+            <img src="images/history-timeline.jpg" alt="История компьютерного зрения" class="tech-diagram">
+            <div class="timeline">
+                <p><strong>1960-е:</strong> Первые алгоритмы распознавания простых геометрических форм</p>
+                <p><strong>1980-е:</strong> Появление промышленных систем контроля качества</p>
+                <p><strong>1990-е:</strong> Массовое внедрение сканеров штрих-кодов</p>
+                <p><strong>2010-е:</strong> Революция глубокого обучения (AlexNet, ResNet)</p>
+                <p><strong>2020-е:</strong> Трансформеры в компьютерном зрении (ViT, DETR)</p>
+            </div>
+        </section>
+
+        <!-- Основные принципы -->
+        <section class="tech-card">
+            <h2>Основные принципы</h2>
+            <img src="images/cv-pipeline.jpg" alt="Процесс обработки изображений" class="tech-diagram">
+            <ol>
+                <li><strong>Получение изображения:</strong> Камеры, датчики, медицинские сканеры</li>
+                <li><strong>Предварительная обработка:</strong>
+                    <ul>
+                        <li>Фильтрация шумов (гауссовский, медианный фильтры)</li>
+                        <li>Коррекция освещения (гистограммная эквализация)</li>
+                        <li>Бинаризация (метод Оцу)</li>
+                    </ul>
+                </li>
+                <li><strong>Выделение признаков:</strong>
+                    <ul>
+                        <li>SIFT/SURF для ключевых точек</li>
+                        <li>HOG для обнаружения объектов</li>
+                        <li>Глубокие нейросети (автоматическое выделение признаков)</li>
+                    </ul>
+                </li>
+                <li><strong>Анализ и интерпретация:</strong>
+                    <ul>
+                        <li>Классификация (ResNet, EfficientNet)</li>
+                        <li>Детекция (YOLO, Faster R-CNN)</li>
+                        <li>Сегментация (U-Net, Mask R-CNN)</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Популярные алгоритмы -->
+        <section class="tech-card">
+            <h2>Ключевые алгоритмы</h2>
+            <div class="algorithm-list">
+                <div>
+                    <h3>Классические методы</h3>
+                    <ul>
+                        <li><strong>Метод Виолы-Джонса:</strong> Обнаружение лиц</li>
+                        <li><strong>Алгоритм Canny:</strong> Выделение границ</li>
+                        <li><strong>Оптический поток Лукаса-Канаде:</strong> Отслеживание движения</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Глубокое обучение</h3>
+                    <ul>
+                        <li><strong>YOLOv8:</strong> Обнаружение объектов в реальном времени</li>
+                        <li><strong>Segment Anything (SAM):</strong> Универсальная сегментация</li>
+                        <li><strong>Vision Transformers:</strong> Классификация изображений</li>
+                    </ul>
+                </div>
+            </div>
+            <img src="images/alg-comparison.png" alt="Сравнение алгоритмов" class="tech-diagram">
+        </section>
+
+        <!-- Техническая реализация -->
+        <section class="tech-card">
+            <h2>Техническая реализация</h2>
+            <h3>Оборудование</h3>
+            <ul>
+                <li><strong>Камеры:</strong> RGB, глубины (Intel RealSense), тепловизоры</li>
+                <li><strong>Вычислительные модули:</strong> NVIDIA Jetson, Intel Neural Compute Stick</li>
+                <li><strong>Облачные платформы:</strong> Google Vision AI, AWS Rekognition</li>
+            </ul>
+            
+            <h3>Программные инструменты</h3>
+            <div class="software-grid">
+                <div class="software-item">
+                    <h4>OpenCV</h4>
+                    <p>Библиотека компьютерного зрения с 2500+ алгоритмов</p>
+                </div>
+                <div class="software-item">
+                    <h4>PyTorch</h4>
+                    <p>Фреймворк для глубокого обучения</p>
+                </div>
+                <div class="software-item">
+                    <h4>TensorFlow Lite</h4>
+                    <p>Оптимизированные модели для мобильных устройств</p>
+                </div>
+            </div>
+            
+            <h3>Процесс разработки</h3>
+            <ol>
+                <li>Сбор и разметка данных (LabelImg, CVAT)</li>
+                <li>Обучение модели (Google Colab, локальный сервер)</li>
+                <li>Оптимизация (квантование, pruning)</li>
+                <li>Развертывание (Docker, ONNX Runtime)</li>
+            </ol>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Школьный проект © 2025</p>
+    </footer>
+</body>
+</html>
